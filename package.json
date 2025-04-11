@@ -1,0 +1,53 @@
+{
+  "name": "codexor",
+  "displayName": "Codexor",
+  "description": "VS Code extension for autocompletion, error fixing, analytics, and language switching.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [
+  "onLanguage:javascript",
+  "onLanguage:python",
+  "onLanguage:java"
+],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codexor.helloWorld",
+        "title": "Codexor: Hello World"
+      },
+      {
+        "command": "codexor.translateCode",
+        "title": "Codexor: Translate Code"
+      }
+    ],
+    "languages": [
+    {
+      "id": "javascript",
+      "extensions": [".js"]
+    },
+    {
+      "id": "python",
+      "extensions": [".py"]
+    },
+    {
+      "id": "java",
+      "extensions": [".java"]
+    }
+  ]
+  },
+  "snippets": [],
+ 
+  "menus": {},
+  "keybindings": [],
+  "configuration": {},
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  }
+}
